@@ -27,8 +27,10 @@ Locate the pybind11 `includes` folder
 python -m pybind11 --includes
 ```
 
-You should get something like: 
-`-I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -I/Users/<your-username>/<path-to-project>/python-cpp-test/.venv/lib/python3.13/site-packages/pybind11/include`
+You should get output like this: 
+```bash
+-I/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13 -I/Users/<your-username>/<path-to-project>/python-cpp-example/.venv/lib/python3.13/site-packages/pybind11/include
+```
 
 Note: the first path should correspond to your Python installation. My Python was installed with homebrew. The path to yours may differ.
 
@@ -44,7 +46,7 @@ You must update the `c_cpp_properties.json` because the paths for my machine won
 ```json
 "includePath": [
                 "${workspaceFolder}/**",
-                "/Users/<your-username>/<path-to-project>/python-cpp-test/.venv/lib/python3.13/site-packages/pybind11/include",
+                "/Users/<your-username>/<path-to-project>/python-cpp-example/.venv/lib/python3.13/site-packages/pybind11/include",
                 "/opt/homebrew/opt/python@3.13/Frameworks/Python.framework/Versions/3.13/include/python3.13",
             ],
 ```
